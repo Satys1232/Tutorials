@@ -27,14 +27,29 @@ drinks.right = cold
 #         /  \         /  \
 #        tea   cofee  cola  fanta
 # """
-def preorder_traversal(head):
+# def preorder_traversal(head):
+#     if head == None:
+#         return
+#     preorder_traversal(head.left)
+#     print(head.data)
+#     preorder_traversal(head.right)
+
+# def inorder_traversal(head):
+#     if head == None:
+#         return
+#     inorder_traversal(head.left)
+#     print(head.data)
+#     inorder_traversal(head.right)
+
+def postorder_traversal(head):
     if head == None:
         return
+    postorder_traversal(head.left)
+    postorder_traversal(head.right)
     print(head.data)
-    preorder_traversal(head.left)
-    preorder_traversal(head.right)
+
 
 if __name__ == "__main__":
-    preorder_traversal(head)
+    postorder_traversal(head)
 
 
